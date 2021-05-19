@@ -1,0 +1,339 @@
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#main-wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    background-color: rgb(0, 0, 0);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.block {
+    display: block
+}
+
+
+/* Header
+   ========================================================================== */
+#main-header .container {
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    font-family: 'Lilita One', cursive;
+    font-size: 1.5rem;
+    color: #26fef3;
+}
+
+#myInput {
+    border-radius: 20px;
+    height: 2rem;
+    width: 15rem;
+    padding: 0 1rem;
+    border: 1px solid #ec0d0d;
+    margin: 0.5rem 0;
+}
+
+#myInput:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 1px #2684fe;
+}
+
+#myInput::placeholder{
+    text-align: center;
+}
+
+
+/* Main
+   ========================================================================== */
+#main-content {
+    
+    background-color: #f5f5f5;
+    background-color: #ce5bc8;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#section-a {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 1rem;
+
+    display: grid;
+    row-gap: 1rem;
+}
+
+.card {
+    max-width: 100%;
+    height: min-content;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: .1s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.employee-photo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.card-content {
+    padding-left: 0.5rem;
+    width: 80%;
+}
+
+.employee-name, .employee-email, .employee-city {
+    font-size: .8rem;
+} 
+
+
+/* Modal
+   ========================================================================== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal {
+    width: 100%;
+    height: min-content;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    
+}
+
+.modal-container {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#modal-header {
+    background-color: #2684fe;
+    height: 2rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.close-btn {
+    height: 1rem;
+    width: 1rem;
+
+       display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.xBtn {
+    height: 1rem;
+    width: 1rem;
+    fill: #fff;
+}
+
+.modal-main {
+    height: 100%;
+    width: 100%;
+}
+
+#modal-content {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #b3b3b3;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.employee-photo-modal {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+#modal-content-2 {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#btnPrevious {
+    padding: 1rem;
+    background-color: #fff;
+    color: #2684fe;
+    border: 1px solid #2684fe;
+    border-radius: 8px;
+    width: 6rem;
+}
+
+#btnNext {
+    padding: 1rem;
+    background-color: #2684fe;
+    color: white;
+    border: 1px solid #2684fe;
+    border-radius: 8px;
+    width: 6rem;
+}
+
+.xBtn, #btnPrevious, #btnNext {
+    cursor: pointer;
+}
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    /* Header
+       ========================================================================== */
+    #main-header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #logo {
+        font-size: 2.2rem;
+    }
+
+
+    /* Main
+       ========================================================================== */
+    #main-content {
+        display: grid;
+        grid-template-columns: 1fr minmax(800px, auto) 1fr;
+        
+    }
+
+    #section-a {
+        grid-column: 2/3;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: min-content;
+        gap: 5rem;
+        
+    }
+
+    .employee-photo {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+    }
+
+    .card-content {
+        padding-left: 3rem;
+    }
+        
+    .employee-name, .employee-email, .employee-city {
+        font-size: 1rem;
+     
+    } 
+
+
+
+
+
+}
+
+
+@media (min-width: 1024px) {
+    /* Header
+    ========================================================================== */
+    #main-header .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+   
+
+    /* Main
+    ========================================================================== */
+    #section-a {
+        grid-template-columns: 3fr 3fr 3fr;
+        column-gap: 80px;    
+        align-content: center;
+    }
+
+    .employee-photo {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+    }
+
+
+    .card-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right:0 ;
+        margin-left: 0;
+    }
+        
+    .employee-name, .employee-email, .employee-city {
+        font-size: 1rem;
+     
+    } 
+}
