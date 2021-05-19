@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
@@ -108,9 +108,15 @@ body {
     padding: 1rem;
 }
 
+
+
 .card:hover{
     transform: scale(1.01);
     cursor: pointer;
+    transform: scale(1.2);
+    background-color: black;
+    color: white;
+    
 }
 
 .employee-photo {
